@@ -46,10 +46,11 @@
 
 1. 读 [docs/01_核心理念.md](docs/01_核心理念.md)：10 分钟理解为什么这样分工。
 2. 读 [docs/09_机器人项目约定.md](docs/09_机器人项目约定.md) 和 [hardware/](hardware/README.md)：机器人项目通常有哪几条线、现有设备能做什么、不能做什么。
-3. 按 [docs/02_角色设计.md](docs/02_角色设计.md) 决定这个项目要几个 agent、各管什么。
-4. 照 [docs/08_落地步骤.md](docs/08_落地步骤.md) 的清单建仓库目录、放模板、建定时任务。
-5. 用 [templates/](templates/) 里的提示词启动"项目总览"和各个 agent。
-6. 之后每天只做 [docs/06_用户的一天.md](docs/06_用户的一天.md) 里那几件事。
+3. 新想法先过 [选题准入](docs/10_选题准入与投稿审核.md)：属于可接受的四类之一，并且问题有文献证据。过不了就不立项。
+4. 按 [docs/02_角色设计.md](docs/02_角色设计.md) 决定这个项目要几个 agent、各管什么。
+5. 照 [docs/08_落地步骤.md](docs/08_落地步骤.md) 的清单建仓库目录、放模板、建定时任务。
+6. 用 [templates/](templates/) 里的提示词启动"项目总览"和各个 agent。
+7. 之后每天只做 [docs/06_用户的一天.md](docs/06_用户的一天.md) 里那几件事。
 
 **想让 Claude 直接帮你搭？** 把 [SKILL.md](SKILL.md) 交给 Claude（或装成 skill），说"按这个工作流给我的新项目搭一套"，它会先问你项目情况，再生成目录、模板和定时任务。
 
@@ -66,6 +67,7 @@
 | [07 踩坑记录](docs/07_踩坑记录.md) | 真实运行中遇到的问题和解决办法 |
 | [08 落地步骤](docs/08_落地步骤.md) | 新项目从零开始的清单 |
 | [09 机器人项目约定](docs/09_机器人项目约定.md) | 常见工作线、仿真与真机的先后、真机安全、共用设备的规矩、外部评审怎么处理 |
+| [10 选题准入与投稿审核](docs/10_选题准入与投稿审核.md) | 什么样的想法才立项（四类 + 问题必须有文献证据）；怎么用评审 agent 选会议、按会议标准评审 |
 
 | 设备档案 | 内容 |
 |---|---|
@@ -85,6 +87,8 @@
 | [本机执行 agent 提示词](templates/prompts/local_agent.md) | 需要读写你电脑上本地文件的 agent |
 | [交互式 agent 提示词](templates/prompts/interactive_agent.md) | 需要你在场的工作（如真机实验） |
 | [远端执行端规则](templates/prompts/remote_executor_CLAUDE.md) | 跑在超算 / 服务器上的 Claude Code |
+| [投稿审核提示词](templates/prompts/venue_review.md) | 交给评审 agent：选会议、按该会议标准评审、复查选题准入；含会议事实快照 |
+| [选题准入记录](templates/repo/idea_admission.md) | 立项前填：属于哪一类、问题的文献证据、查新 |
 | [仓库文件模板](templates/repo/) | 决策、任务单、STATE、消息、指示、需要你处理、自动运行规则 |
 | [桌面待办模板](templates/desktop_todo.md) | 放在你本机桌面、每天看的待办 |
 | [同步脚本](scripts/) | 本机每 20 分钟自动提交、拉取、推送；带暂停开关和失败标记 |
